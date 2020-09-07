@@ -1,2 +1,19 @@
+@import '../style/_variables';
+
 .App {
+  background-color:$bg-gray;
+}
+
+.GroupList {
+  display: flex;
+  justify-self: space-between;
+  align-items: center;
+  
+}
+
+.SpiltGroup {
+    color: white;
+    background-color: red;
+    border-style: none;
+    padding:5px 15px;
 }
