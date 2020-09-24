@@ -1,0 +1,17 @@
+.trainers-list-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-content: space-between;
+    list-style-type: none;
+}
+
+.trainers-list-content li {
+    width: 110px;
+    height: 5px;
+    line-height: 5px;
+    padding: 10px;
+    margin: 10px;
+    margin-left: 0;
+    background-color: #eeeeee;
+}
