@@ -1,5 +1,8 @@
 import React, { Component } from 'react';
+import { BrowserRouter as Router,Link } from 'react-router-dom';
+import {Route} from "react-router";
 import './trainees.scss';
+import AddTrainee from "./AddTrainee"
 
 class Trainees extends Component {
   state = {
@@ -29,15 +32,20 @@ class Trainees extends Component {
       });
   }
 
+
   render() {
     return (
       <section className="trainees-list">
         <h2>学员列表</h2>
         <ul className="trainees-list-content">
           {this.state.trainees.map((trainee) => (
-            <li>{trainee.id}. {trainee.name}</li>))
-          }
+            <li>{trainee.id}. {trainee.name}</li>))}
         </ul>
+        <Router>
+          <Link to="/addTrainee" className="add-trainer">+添加学员</Link>
+          <Route exact path='/addTrainee' component={AddTrainee} />
+          
+        </Router>
       </section>
     );
   }
