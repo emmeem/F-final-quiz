@@ -42,7 +42,7 @@ class Trainees extends Component {
             <li>{trainee.id}. {trainee.name}</li>))}
         </ul>
         <Router>
-          <Link to="/addTrainee" className="add-trainer">+添加学员</Link>
+          <Link to="/addTrainee" className="add-trainee">+添加学员</Link>
           <Route exact path='/addTrainee' component={AddTrainee} />
           
         </Router>

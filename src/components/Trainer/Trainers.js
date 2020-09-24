@@ -1,5 +1,8 @@
 import React, { Component } from 'react';
 import './trainers.scss';
+import { BrowserRouter as Router,Link } from 'react-router-dom';
+import {Route} from "react-router";
+import AddTrainer from "./AddTrainer"
 
 class Trainers extends Component {
   state = {
@@ -37,6 +40,11 @@ class Trainers extends Component {
           {this.state.trainers.map((trainer) => (
             <li>{trainer.id}. {trainer.name}</li>))}
         </ul>
+        <Router>
+          <Link to="/addTrainer" className="add-trainer">+添加讲师</Link>
+          <Route exact path='/addTrainer' component={AddTrainer} />
+          
+        </Router>
       </section>
     );
   }
