@@ -41,10 +41,12 @@ class Trainees extends Component {
           {this.state.trainees.map((trainee) => (
             <li>{trainee.id}. {trainee.name}</li>))}
         </ul>
+        {/*// TODO Feedback:Router不应该在这里定义*/}
         <Router>
           <Link to="/addTrainee" className="add-trainee">+添加学员</Link>
+          {/*// TODO Feedback:应该有两个路由*/}
           <Route exact path='/addTrainee' component={AddTrainee} />
-          
+
         </Router>
       </section>
     );

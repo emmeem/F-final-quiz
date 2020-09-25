@@ -41,9 +41,10 @@ class Trainers extends Component {
             <li>{trainer.id}. {trainer.name}</li>))}
         </ul>
         <Router>
+          {/*// TODO Feedback:添加trainer不是一个页面*/}
           <Link to="/addTrainer" className="add-trainer">+添加讲师</Link>
           <Route exact path='/addTrainer' component={AddTrainer} />
-          
+
         </Router>
       </section>
     );
